@@ -19,6 +19,9 @@ function App() {
           <Link to="/animatedgrid" className="home-button">
              Task 3
           </Link>
+          <Link to="/task3" className="home-button">
+             Task 4
+          </Link>
         </div>
       </div>
     </>

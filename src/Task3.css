@@ -1,0 +1,215 @@
+.testimonials-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Common styles */
+.photo,
+.emoticon {
+  position: absolute;
+  transition: transform 0.6s ease;
+  z-index: 1;
+}
+
+.photo {
+  width: 120px;
+  height: 120px;
+  border-radius: 20px;
+  overflow: visible;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.emoticon {
+  width: 100px;
+  height: 100px;
+}
+
+.photo img,
+.emoticon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Positioning - DEFAULT state near the center */
+.photo1 {
+  top: 15%;
+  left: 43%;
+  transform: translate(-50%, 0);
+} /* top center */
+.photo2 {
+  top: 40%;
+  left: 70%;
+  transform: translate(-50%, 0);
+} /* right top */
+.photo3 {
+  top: 40%;
+  left: 30%;
+  transform: translate(-50%, 0);
+} /* left top */
+.photo4 {
+  top: 15%;
+  left: 60%;
+  transform: translate(-50%, 0);
+} /* left bottom */
+.photo5 {
+  top: 70%;
+  left: 43%;
+  transform: translate(-50%, 0);
+} /* right bottom */
+.photo6 {
+  top: 70%;
+  left: 60%;
+  transform: translate(-50%, 0);
+} /* bottom center */
+
+.emoticon1 {
+  top: 25%;
+  left: 51.5%;
+  transform: translate(-50%, 0);
+} /* top center gap */
+.emoticon2 {
+  top: 70%;
+  left: 30%;
+  transform: translate(-50%, 0);
+} /* bottom left gap */
+.emoticon3 {
+  top: 75%;
+  left: 51.5%;
+  transform: translate(-50%, 0);
+} /* bottom center gap */
+.emoticon4 {
+  top: 65%;
+  left: 70%;
+  transform: translate(-50%, 0);
+} /* bottom right gap */
+
+/* Center Content */
+.center-content {
+  /* background: white; */
+  padding: 30px 50px;
+  border-radius: 12px;
+  text-align: center;
+  cursor: pointer;
+  z-index: 2;
+  transition: box-shadow 0.3s ease;
+}
+
+.center-content h2 {
+  font-size: 2rem;
+  margin: 0;
+}
+.center-content h2 span {
+  color: #059b37;
+}
+.center-content p {
+  margin-top: 8px;
+  color: #555;
+}
+
+.testimonials-container:hover .photo1 {
+  transform: translate(-50%, -80px); /* straight up */
+}
+.testimonials-container:hover .photo2 {
+  transform: translate(60px, 0); /* straight right */
+}
+/* Photo3 moves left from center */
+.testimonials-container:hover .photo3 {
+  transform: translate(calc(-50% - 60px), 0);
+}
+
+/* Photo4 moves straight up */
+.testimonials-container:hover .photo4 {
+  transform: translate(-50%, -80px);
+}
+
+.testimonials-container:hover .photo5 {
+  transform: translate(-50%, 80px); /* straight down */
+}
+.testimonials-container:hover .photo6 {
+  transform: translate(-50%, 80px); /* straight down */
+}
+
+.testimonials-container:hover .emoticon1 {
+  transform: translate(-50%, -80px); /* straight up */
+}
+.testimonials-container:hover .emoticon2 {
+  transform: translate(-60px, 60px); /* down left */
+}
+.testimonials-container:hover .emoticon3 {
+  transform: translate(-50px, 80px); /* straight down */
+}
+.testimonials-container:hover .emoticon4 {
+  transform: translate(60px, 60px); /* down right */
+}
+.star-review {
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  border: 1px solid #ccc;
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 14px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  animation: fadeInOut 3s;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text-review {
+  position: absolute;
+  top: 100%; /* below the photo */
+  left: 50%;
+  transform: translate(-50%, 12px);
+  width: 220px;
+  background: #fefefe;
+  border: 1px solid #e0e0e0;
+  padding: 14px 16px;
+  font-size: 15px;
+  line-height: 1.4;
+  color: #333;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  border-radius: 8px;
+  z-index: 1000;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+
+
+.video-review {
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-radius: 6px;
+}
+
+.active-shadow {
+  box-shadow: 0 0 15px 3px #5ac436;
+  transition: box-shadow 0.3s;
+}
