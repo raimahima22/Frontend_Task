@@ -1,24 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
-import { Link } from 'react-router-dom'
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <div className="h-screen flex flex-col items-center justify-center bg-blue-100">
-      <h1 className="text-4xl font-bold mb-4">Welcome to my Hometask</h1>
-      <Link to="/task1">
-        <button className="px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition">
-          Task 1
-        </button>
-      </Link>
-    </div>
+      <div className="home-container">
+        <h1 className="home-title">Welcome to my Hometask</h1>
+        <div className="button-group">
+          <Link to="/task1" className="home-button">
+             Task 1
+          </Link>
+          <Link to="/task2" className="home-button">
+             Task 2
+          </Link>
+        </div>
+      </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

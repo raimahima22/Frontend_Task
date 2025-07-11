@@ -1,0 +1,297 @@
+/* RESET */
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background: #fff;
+}
+
+.page-container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Titles */
+.page-title {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.3rem;
+}
+
+.page-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111;
+}
+
+.page-heading span {
+  color: #16a34a; /* green */
+}
+
+/* Flex container */
+.cards-container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+}
+
+/* All Courses Card */
+.all-courses-card {
+  background-color: #ef4444;
+  color: white;
+  border-radius: 1rem;
+  padding: 1.25rem 1.5rem;
+  flex: 0 0 50%;
+  width:500px;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-sizing: border-box;
+  position: relative;
+  text-align: center;
+  align-items: center;
+}
+
+/* Top link */
+.all-courses-link {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: white;
+  font-size: 0.85rem;
+  text-decoration: none;
+}
+
+/* Icons Row */
+.all-courses-icons {
+  display: flex;
+  flex-direction: row;
+  padding:1rem;
+  margin-top: 30px;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+
+.all-courses-icons img {
+  width: 80px;
+  height: auto;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.all-courses-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+}
+
+.all-courses-link:hover,
+.all-courses-link:focus,
+.all-courses-link:active {
+  color: white; /* Keep it white on hover/focus/active */
+}
+
+.count-and-info {
+  display: flex;
+  align-items: center;   /* align vertically */
+  gap: 1rem;             /* space between count and text */
+  text-align: left;
+}
+/* Count and text */
+.all-courses-count {
+  font-size: 5rem;
+  font-weight: bold;
+}
+.info-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.all-courses-title {
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.all-courses-description {
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.all-courses-link {
+  color: white;
+  text-decoration: none;
+  font-size: 0.85rem;
+  margin-top: auto; /* pushes it to bottom if desired */
+}
+.all-courses-card > div:nth-child(2) {
+  margin-top: 1rem;
+}
+
+/* Stat Cards */
+.stat-card {
+  background-color: #fee2e2;
+  color: #b91c1c;
+  border-radius: 1rem;
+  padding: 1rem;
+  flex: 0 0 24%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;   /* Center horizontally */
+  justify-content: space-between; /* Center vertically */
+  /* box-sizing: border-box; */
+  text-align: center;
+   position: relative;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.stat-vertical-container {
+  display: flex;
+  gap: 1rem; /* space between the columns */
+  transform: rotate(180deg);
+  flex-direction: column;
+  writing-mode: vertical-rl;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Stat count */
+.stat-count {
+  font-size: 5rem;
+  font-weight: bold;
+}
+
+/* Vertical title */
+.stat-title-vertical {
+  font-weight: 600;
+  font-size: 1.4rem;  
+  margin-bottom: 0.5rem;
+}
+
+.stat-description-vertical {
+  font-size: 0.9rem; /* Bigger font */
+  margin-bottom: 1rem;
+  writing-mode: vertical-rl;
+}
+
+/* Description */
+.stat-description {
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+/* Remove unexpected spacing globally */
+* {
+  box-sizing: border-box;
+}
+.page-title {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 0.25rem;
+  text-align: left;
+}
+
+.page-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: #111;
+  text-align: left;
+
+}
+
+.page-heading span {
+  color: #16a34a;
+}
+.stat-hover-arrow {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.stat-card:hover .stat-hover-arrow {
+  opacity: 1;
+  cursor: pointer;
+}
+/* Base styling */
+.stat-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s ease;
+  cursor: pointer;
+}
+
+/* Circle overlay */
+.stat-card::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255, 0, 0, 0.15);
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+/* Expanding circle */
+.stat-card.active::before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+/* Contracting circle */
+.stat-card.deactivating::before {
+  transform: translate(-50%, -50%) scale(0);
+}
+
+/* Bring content above overlay */
+.stat-card.active > *,
+.stat-card.deactivating > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* Fade content */
+.stat-card .count-and-info,
+.stat-card .all-courses-icons,
+.stat-card .all-courses-link {
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+.stat-card.active .count-and-info,
+.stat-card.active .all-courses-icons,
+.stat-card.active .all-courses-link {
+  opacity: 1;
+}
+.stat-card.deactivating .count-and-info,
+.stat-card.deactivating .all-courses-icons,
+.stat-card.deactivating .all-courses-link {
+  opacity: 0;
+}
+/* Smooth fade/scale transition */
+.cards-container > div {
+  transition: all 0.3s ease;
+}
+
+/* Hover lift effect */
+.cards-container > div:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+
+

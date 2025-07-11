@@ -1,9 +1,9 @@
 .task-container {
   min-height: 100vh;
   padding: 8px;
+  margin:50px;
   font-family: sans-serif;
 }
-
 .header {
   text-align: left;
   margin-bottom: 48px;
@@ -30,6 +30,7 @@
 
 .card {
   display: flex;
+  position: relative;
   flex-direction: row;
   border-radius: 20px;
   overflow: hidden;
@@ -38,7 +39,9 @@
   transition: transform 0.2s;
   padding: 10px;
   text-align: left;
+  border-radius: 1.5rem;
   gap: 20px;
+  
 }
 
 .card-grid {
@@ -234,7 +237,6 @@
   transform: rotate(-20deg);
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   opacity: 0.9;
-  
 }
 
 /* Vertical layout for second underneath card */
@@ -292,42 +294,62 @@
 
 /* Shared styles for both buttons */
 .side-button {
-  background: white;
-  border: none;
-  border-radius: 50%; /* makes the element a circle */
-  width: 32px;
-  height: 32px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 3;
-  box-shadow:
-    0 0 0 12px white,               /* circular white ring */
-    inset 0 2px 6px rgba(0,0,0,0.2); /* circular inset shadow */
+  z-index: 2;
+  width: 4rem;
+  height: 4rem;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+    box-shadow: 0 0 0 8px white; 
+  box-shadow: 0 0 0 10px var(--card-bg-color); 
   cursor: pointer;
+  transition: 0.3s ease, transform 0.2s ease;
 }
 
 
+.side-button:hover {
+  background: #f0f0f0;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.side-button .arrow {
+  font-size: 1.5rem;
+  color: #333;
+  line-height: 1;
+}
+
+/* Position left and right */
 .side-button.left {
-  left: -28px;
+  left: -2rem; /* Half of button width to stick out */
 }
 
 .side-button.right {
-  right: -28px;
+  right: -2rem;
 }
 
-.side-button:hover {
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 0 0 12px white, 0 4px 10px rgba(0,0,0,0.2);
+/* Make sure each card has a CSS variable for its background */
+.card {
+  --card-bg-color: #e74c3c; /* default fallback red */
 }
 
-.arrow {
-  font-size: 16px;
-  color: #374151;
-  font-weight: bold;
+/* Example colors per card */
+.red-card {
+  --card-bg-color: #e74c3c;
+}
+.blue-card {
+  --card-bg-color: #3498db;
+}
+.violet-card {
+  --card-bg-color: #9b59b6;
+}
+.yellow-card {
+  --card-bg-color: #f1c40f;
 }
 
 

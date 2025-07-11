@@ -40,3 +40,78 @@
 .read-the-docs {
   color: #888;
 }
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #a1c4fd, #c2e9fb);
+  color: #333;
+}
+
+/* Main container */
+.home-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Title styling */
+.home-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #1f2937;
+}
+
+/* Button group with spacing */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 250px;
+}
+
+/* Link buttons */
+.home-button {
+  display: block;
+  padding: 14px 20px;
+  background: #817ae3;
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.home-button:hover {
+  background: #6e67d6;
+  color:white;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Optional: Add responsiveness */
+@media (max-width: 500px) {
+  .home-title {
+    font-size: 2rem;
+  }
+
+  .button-group {
+    width: 100%;
+  }
+}
