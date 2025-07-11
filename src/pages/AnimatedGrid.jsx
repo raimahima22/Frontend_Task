@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import "../AnimatedGrid.css";
 
-const ROWS = 9;      // adjust grid size
+const ROWS = 9;      
 const COLS = 12;
-const INTERVAL_MS = 2000; // interval between highlights
+const INTERVAL_MS = 2000; // time interval 
 
 export default function AnimatedGrid() {
   const [glowingTiles, setGlowingTiles] = useState([]);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      // Choose random tiles to glow
+
       const count = Math.floor(Math.random() * 5) + 3; // 3–7 tiles
       const newGlowing = [];
       for (let i = 0; i < count; i++) {

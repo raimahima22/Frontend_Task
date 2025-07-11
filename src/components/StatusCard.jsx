@@ -1,4 +1,4 @@
-// src/components/StatusCard.jsx
+
 import React from "react";
 import "../Task2.css";
 
@@ -10,7 +10,7 @@ const StatusCard = ({
   onClick,
 }) => {
   if (isActive) {
-    // Render AllCoursesCard-like layout
+
     return (
       <div className="all-courses-card" onClick={onClick}>
         <div className="all-courses-icons">
@@ -33,7 +33,7 @@ const StatusCard = ({
     );
   }
 
-  // Default StatusCard
+
   return (
     <div className="stat-card" onClick={onClick}>
       <div className="stat-vertical-container">

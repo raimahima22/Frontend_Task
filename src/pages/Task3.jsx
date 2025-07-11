@@ -2,22 +2,21 @@ import React, { useEffect, useState } from "react";
 import "../Task3.css";
 
 export default function Task3() {
-  // State to toggle star reviews
+ 
   const [showStar1, setShowStar1] = useState(false);
   const [showStar6, setShowStar6] = useState(false);
 
-  // State to track clicks
+  
   const [showTextCard1, setShowTextCard1] = useState(false);
   const [showVideoCard6, setShowVideoCard6] = useState(false);
 
   useEffect(() => {
-    // Interval for Person 1 star review
+    
     const interval1 = setInterval(() => {
       setShowStar1(true);
       setTimeout(() => setShowStar1(false), 3000); // show for 3 sec
     }, 7000);
 
-    // Interval for Person 6 star review
     const interval6 = setInterval(() => {
       setShowStar6(true);
       setTimeout(() => setShowStar6(false), 3000);
@@ -31,7 +30,7 @@ export default function Task3() {
 
   return (
     <div className="testimonials-container">
-      {/* Person 1 */}
+  
       <div
         className={`photo photo1 ${showTextCard1 ? "active-shadow" : ""}`}
         onClick={() => setShowTextCard1((prev) => !prev)}
@@ -47,7 +46,6 @@ export default function Task3() {
         )}
       </div>
 
-      {/* Other People */}
       <div className="photo photo2">
         <img src="/images/four.png" alt="Person 2" />
       </div>
@@ -61,7 +59,6 @@ export default function Task3() {
         <img src="/images/two.png" alt="Person 5" />
       </div>
 
-      {/* Person 6 */}
       <div
         className={`photo photo6 ${showVideoCard6 ? "active-shadow" : ""}`}
         onClick={() => setShowVideoCard6((prev) => !prev)}
@@ -78,7 +75,6 @@ export default function Task3() {
         )}
       </div>
 
-      {/* Emoticons */}
       <div className="emoticon emoticon1">
         <img src="/images/likes.gif" alt="Like" />
       </div>
@@ -92,7 +88,6 @@ export default function Task3() {
         <img src="/images/fb.gif" alt="Facebook" />
       </div>
 
-      {/* Center Text */}
       <div className="center-content">
         <p>Hear how they level up their game!</p>
         <h2>

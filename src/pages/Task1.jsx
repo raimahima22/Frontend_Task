@@ -55,7 +55,7 @@ export default function Task1() {
 
           return (
             <div key={idx} className={`card-container ${slideDirection}`}>
-              {/* Underneath card */}
+              
               <div
                 className={`card underneath-card ${card.bg} ${
                   idx === 0 ? "first-underneath" : ""
@@ -90,7 +90,7 @@ export default function Task1() {
                     </div>
                   </div>
                 ) : idx === 1 ? (
-                  // Second special underneath card
+                  
                   <div className="second-underneath-content">
                     <div className="second-underneath-text">
                       <h3>Focused faces—learning mode: ON!</h3>
@@ -122,7 +122,7 @@ export default function Task1() {
               {/* </div> */}
               </div>
 
-              {/* Top card */}
+             
               <div className={`card top-card ${card.bg}`}>
                 <div className="card-img-wrapper">
                   <img

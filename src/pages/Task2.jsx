@@ -4,7 +4,7 @@ import AllCoursesCard from "../components/AllCoursesCard";
 import StatusCard from "../components/StatusCard";
 import "../Task2.css";
 const Task2 = () => {
-  // Track which StatusCard is active
+
   const [activeCard, setActiveCard] = useState('all');
 
   const handleCardClick = (cardId) => {
@@ -21,7 +21,7 @@ const Task2 = () => {
       </h1>
 
       <div className="cards-container">
-        {/* All Courses Card toggles into StatusCard */}
+        
         {activeCard === "all" ? (
           <AllCoursesCard
             count="23"
@@ -43,7 +43,7 @@ const Task2 = () => {
           />
         )}
 
-        {/* StatusCard #1 */}
+    
         <StatusCard
           id="upcoming"
           count="05"
@@ -53,7 +53,7 @@ const Task2 = () => {
           onClick={() => handleCardClick("upcoming")}
         />
 
-        {/* StatusCard #2 */}
+     
         <StatusCard
           id="ongoing"
           count="10"

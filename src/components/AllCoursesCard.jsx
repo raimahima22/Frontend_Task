@@ -1,4 +1,4 @@
-// src/components/AllCoursesCard.jsx
+
 import React from "react";
 import "../Task2.css";
 
